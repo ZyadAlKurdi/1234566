@@ -33,7 +33,6 @@
             margin: 0 auto;
         }
 
-        /* رأس الصفحة */
         .header {
             text-align: center;
             background: linear-gradient(135deg, var(--dark), var(--primary));
@@ -47,14 +46,13 @@
         .header h1 { margin: 0; font-size: 32px; font-weight: 800; }
         .header p { margin: 10px 0 0; font-size: 18px; opacity: 0.9; }
 
-        /* شبكة البطاقات */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
         }
 
-        /* تصميم البطاقة */
+        /* تصميم البطاقات الأساسية */
         .card {
             background: var(--white);
             border-radius: 15px;
@@ -70,7 +68,6 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
-        /* الخط العلوي الملون */
         .card::before {
             content: '';
             position: absolute;
@@ -85,6 +82,25 @@
         .card.orange::before { background-color: var(--warning); }
         .card.teal::before { background-color: var(--teal); }
 
+        /* البطاقة المميزة والخاصة جداً (شرح السبورة) */
+        .card-special {
+            grid-column: 1 / -1; /* تأخذ العرض بالكامل */
+            background: #fff;
+            border: 2px solid var(--purple);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(142, 68, 173, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .card-special .card-title {
+            color: var(--purple);
+            font-size: 26px;
+            border-bottom: 2px dashed var(--purple);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
         .card-title {
             font-size: 22px;
             font-weight: 700;
@@ -94,10 +110,7 @@
             color: var(--dark);
         }
 
-        /* الحاويات الداخلية للأرقام */
-        .item-wrapper {
-            margin-bottom: 20px;
-        }
+        .item-wrapper { margin-bottom: 20px; }
 
         .item {
             display: flex;
@@ -113,6 +126,7 @@
         .item.green { border-color: var(--success); }
         .item.orange { border-color: var(--warning); }
         .item.teal { border-color: var(--teal); }
+        .item.purple { border-color: var(--purple); background: #fdfafb; }
 
         .item-text { font-weight: 700; font-size: 16px; }
         
@@ -124,7 +138,6 @@
             font-size: 15px;
         }
 
-        /* صناديق الشرح والتفاصيل */
         .details-box {
             padding: 12px 15px;
             border-radius: 0 0 8px 8px;
@@ -140,6 +153,24 @@
         .details-box.green { background: #eafaf1; border: 1px solid #d5f5e3; border-right: 4px solid var(--success); }
         .details-box.orange { background: #fef5e7; border: 1px solid #fadbd8; border-right: 4px solid var(--warning); }
         .details-box.teal { background: #e8f8f5; border: 1px solid #d1f2eb; border-right: 4px solid var(--teal); }
+        .details-box.purple { background: #faf5fb; border: 1px solid #f4ecf8; border-right: 4px solid var(--purple); }
+
+        .example-code {
+            display: block;
+            background: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: #2c3e50;
+            font-family: monospace;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 8px 0;
+            border: 1px dashed var(--purple);
+            direction: rtl;
+        }
+
+        .highlight-word { color: var(--danger); }
+        .highlight-blue { color: var(--primary); }
 
     </style>
 </head>
@@ -152,6 +183,69 @@
         <p>مادة طرائق التدريس - أرقام وتفاصيل شاملة للمراجعة قبل الامتحان</p>
     </div>
 
+    <!-- بطاقة خاصة وعريضة لشرح السبورة (مهم جداً) -->
+    <div class="card-special">
+        <div class="card-title">📣 كيفية كتابة التمرينات البدنية (الإيعاز) - <span style="font-size:16px; color:#7f8c8d; margin-right:10px;">(منقول حرفياً من السبورة)</span></div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            
+            <!-- الملاحظات والقواعد -->
+            <div>
+                <div class="item purple">
+                    <span class="item-text">الملاحظة الأساسية الأولى</span>
+                </div>
+                <div class="details-box purple">
+                    <span class="highlight-word">الوضع الأساسي</span> يأخذ إيعازاً واحداً فقط. (مثل: الوقوف، البروك، الجلوس، الاستلقاء).
+                </div>
+
+                <div class="item purple" style="margin-top: 15px;">
+                    <span class="item-text">الملاحظة الأساسية الثانية</span>
+                </div>
+                <div class="details-box purple">
+                    <span class="highlight-word">الوضع المشتق</span> (مثل: الوقوف، ذراعان جانباً) يأخذ إيعازات حسب العضو المتحرك المهم للحركة.
+                </div>
+
+                <div class="item purple" style="margin-top: 15px;">
+                    <span class="item-text">تسلسل كتابة النداء (6 خطوات)</span>
+                </div>
+                <div class="details-box purple">
+                    يُكتب النداء بالتسلسل التالي:<br>
+                    1. <span class="highlight-blue">[الوضع]</span> (يوضع بين قوسين)<br>
+                    2. <span class="highlight-blue">نوع الحركة</span><br>
+                    3. <span class="highlight-blue">العضو المتحرك</span><br>
+                    4. <span class="highlight-blue">الاتجاه</span><br>
+                    5. <span class="highlight-blue">العدات والتكرار</span><br>
+                    6. <span class="highlight-blue">كلمة السر (كل -- ابدأ)</span>
+                </div>
+            </div>
+
+            <!-- الأمثلة العملية المكتوبة على السبورة -->
+            <div>
+                <div class="item purple">
+                    <span class="item-text">الأمثلة العملية التطبيقية (حرفياً)</span>
+                </div>
+                <div class="details-box purple">
+                    <span class="example-code">[الوقوف] رفع وخفض الذراعين جانباً معاً بـ 2، وبـ 6 تكرارات كل --- ابدأ.</span>
+                    <span class="example-code">[الوقوف] رفع وخفض الساقين معاً بـ 2، وبـ 6 تكرارات كل --- ابدأ.</span>
+                    <span class="example-code">[الوقوف] فتح وضم الساقين معاً بـ 2، وبـ 6 تكرار كل --- ابدأ.</span>
+                    <span class="example-code">[الوقوف] رفع وخفض الذراعين أماماً بـ 2 كل --- ابدأ.</span>
+                    <span class="example-code">[الوقوف، ذراعان فوق الأكتاف] مد وثني الذراعين جانباً معاً بـ 2، وبـ 6 تكرارات.</span>
+                    <span class="example-code">[الوقوف، الانثناء العرضي] مد وثني الذراعين أماماً معاً.</span>
+                </div>
+
+                <div class="item purple" style="margin-top: 15px;">
+                    <span class="item-text">جدول الإيقاع (العدات)</span>
+                </div>
+                <div class="details-box purple">
+                    التمرينات تُقسم إيقاعياً إلى: <strong>(عدتين)</strong>، <strong>(4 عدات)</strong>، <strong>(8 عدات/ثمانية)</strong>.<br>
+                    وهذه العدات تُنفذ بـ <strong>(6 تكرارات)</strong> كما وُضح في الجدول.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- شبكة البطاقات العادية -->
     <div class="grid">
         
         <!-- بطاقة الأوضاع الرياضية -->
