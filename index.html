@@ -84,7 +84,7 @@
 
         /* البطاقة المميزة والخاصة جداً (شرح السبورة) */
         .card-special {
-            grid-column: 1 / -1; /* تأخذ العرض بالكامل */
+            grid-column: 1 / -1; 
             background: #fff;
             border: 2px solid var(--purple);
             border-radius: 15px;
@@ -143,7 +143,7 @@
             border-radius: 0 0 8px 8px;
             border-top: none;
             margin-top: -5px;
-            font-size: 14.5px;
+            font-size: 15px;
             font-weight: 600;
             color: #34495e;
             line-height: 1.8;
@@ -169,8 +169,21 @@
             direction: rtl;
         }
 
-        .highlight-word { color: var(--danger); }
-        .highlight-blue { color: var(--primary); }
+        .highlight-word { color: var(--danger); font-weight: 800;}
+        .highlight-blue { color: var(--primary); font-weight: 800;}
+        
+        /* تنسيق قسم الشرح المبسط */
+        .simplified-explanation {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 3px dashed var(--purple);
+        }
+        
+        .simplified-explanation h3 {
+            color: var(--purple);
+            font-size: 22px;
+            margin-top: 0;
+        }
 
     </style>
 </head>
@@ -183,31 +196,24 @@
         <p>مادة طرائق التدريس - أرقام وتفاصيل شاملة للمراجعة قبل الامتحان</p>
     </div>
 
-    <!-- بطاقة خاصة وعريضة لشرح السبورة (مهم جداً) -->
+    <!-- بطاقة خاصة وعريضة لشرح السبورة -->
     <div class="card-special">
-        <div class="card-title">📣 كيفية كتابة التمرينات البدنية (الإيعاز) - <span style="font-size:16px; color:#7f8c8d; margin-right:10px;">(منقول حرفياً من السبورة)</span></div>
+        <div class="card-title">📣 كيفية كتابة التمرينات البدنية (الإيعاز) - <span style="font-size:16px; color:#7f8c8d; margin-right:10px;">(منقول من السبورة)</span></div>
         
+        <!-- القسم الأكاديمي (القواعد) -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-            
-            <!-- الملاحظات والقواعد -->
             <div>
-                <div class="item purple">
-                    <span class="item-text">الملاحظة الأساسية الأولى</span>
-                </div>
+                <div class="item purple"><span class="item-text">الملاحظة الأساسية الأولى</span></div>
                 <div class="details-box purple">
                     <span class="highlight-word">الوضع الأساسي</span> يأخذ إيعازاً واحداً فقط. (مثل: الوقوف، البروك، الجلوس، الاستلقاء).
                 </div>
 
-                <div class="item purple" style="margin-top: 15px;">
-                    <span class="item-text">الملاحظة الأساسية الثانية</span>
-                </div>
+                <div class="item purple" style="margin-top: 15px;"><span class="item-text">الملاحظة الأساسية الثانية</span></div>
                 <div class="details-box purple">
                     <span class="highlight-word">الوضع المشتق</span> (مثل: الوقوف، ذراعان جانباً) يأخذ إيعازات حسب العضو المتحرك المهم للحركة.
                 </div>
 
-                <div class="item purple" style="margin-top: 15px;">
-                    <span class="item-text">تسلسل كتابة النداء (6 خطوات)</span>
-                </div>
+                <div class="item purple" style="margin-top: 15px;"><span class="item-text">تسلسل كتابة النداء (6 خطوات)</span></div>
                 <div class="details-box purple">
                     يُكتب النداء بالتسلسل التالي:<br>
                     1. <span class="highlight-blue">[الوضع]</span> (يوضع بين قوسين)<br>
@@ -219,29 +225,64 @@
                 </div>
             </div>
 
-            <!-- الأمثلة العملية المكتوبة على السبورة -->
             <div>
-                <div class="item purple">
-                    <span class="item-text">الأمثلة العملية التطبيقية (حرفياً)</span>
-                </div>
+                <div class="item purple"><span class="item-text">الأمثلة العملية التطبيقية (حرفياً)</span></div>
                 <div class="details-box purple">
                     <span class="example-code">[الوقوف] رفع وخفض الذراعين جانباً معاً بـ 2، وبـ 6 تكرارات كل --- ابدأ.</span>
-                    <span class="example-code">[الوقوف] رفع وخفض الساقين معاً بـ 2، وبـ 6 تكرارات كل --- ابدأ.</span>
                     <span class="example-code">[الوقوف] فتح وضم الساقين معاً بـ 2، وبـ 6 تكرار كل --- ابدأ.</span>
-                    <span class="example-code">[الوقوف] رفع وخفض الذراعين أماماً بـ 2 كل --- ابدأ.</span>
                     <span class="example-code">[الوقوف، ذراعان فوق الأكتاف] مد وثني الذراعين جانباً معاً بـ 2، وبـ 6 تكرارات.</span>
-                    <span class="example-code">[الوقوف، الانثناء العرضي] مد وثني الذراعين أماماً معاً.</span>
                 </div>
 
-                <div class="item purple" style="margin-top: 15px;">
-                    <span class="item-text">جدول الإيقاع (العدات)</span>
-                </div>
+                <div class="item purple" style="margin-top: 15px;"><span class="item-text">جدول الإيقاع (العدات)</span></div>
                 <div class="details-box purple">
                     التمرينات تُقسم إيقاعياً إلى: <strong>(عدتين)</strong>، <strong>(4 عدات)</strong>، <strong>(8 عدات/ثمانية)</strong>.<br>
-                    وهذه العدات تُنفذ بـ <strong>(6 تكرارات)</strong> كما وُضح في الجدول.
+                    وهذه العدات تُنفذ عادة بـ <strong>(6 تكرارات)</strong>.
                 </div>
             </div>
+        </div>
 
+        <!-- قسم الشرح المبسط للفهم -->
+        <div class="simplified-explanation">
+            <h3>💡 شرح مبسط للفهم (كيف تتخيلها عملياً للامتحان؟)</h3>
+            
+            <div class="details-box purple" style="background: #fff; border: 2px solid var(--purple); margin-bottom: 20px;">
+                <strong>تخيل الموقف:</strong> أنت مدرس رياضة تقف أمام الطلاب وتريد منهم أداء تمرين (مثل رفع أيديهم). لا يمكنك التحدث بعشوائية، يجب أن تعطيهم <strong>"إيعازاً" (نداءً عسكرياً منظماً)</strong> ليبدأوا معاً. السبورة تشرح <strong>"المعادلة"</strong> التي تصنع بها هذه الجملة.
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div>
+                    <strong>1. من أين نبدأ؟ (الأوضاع):</strong>
+                    <ul style="margin-top: 5px; padding-right: 20px;">
+                        <li><strong>الوضع الأساسي:</strong> وضع طبيعي (وقوف عادي) نكتبه بين قوسين <code>[الوقوف]</code>.</li>
+                        <li><strong>الوضع المشتق:</strong> وضع أضفنا له حركة (طالب يضع يديه بخصره)، نكتبه <code>[الوقوف، الانثناء العرضي]</code>.</li>
+                    </ul>
+
+                    <strong>2. تفكيك المعادلة (كيف تنطق الأمر للطلاب؟):</strong>
+                    <ul style="margin-top: 5px; padding-right: 20px;">
+                        <li><strong>الوضع:</strong> كيف يقف الطالب الآن؟ 👈 <code>[الوقوف]</code></li>
+                        <li><strong>الحركة:</strong> ماذا سيفعل؟ 👈 <code>رفع وخفض</code></li>
+                        <li><strong>العضو:</strong> أي جزء سيحرك؟ 👈 <code>الذراعين</code></li>
+                        <li><strong>الاتجاه:</strong> إلى أين؟ 👈 <code>جانباً معاً</code></li>
+                        <li><strong>العدات:</strong> بأي سرعة وكم مرة؟ 👈 <code>بـ 2 وبـ 6 تكرارات</code></li>
+                        <li><strong>كلمة السر:</strong> الكلمة لبدء الحركة 👈 <code>كل.. ابدأ</code></li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>3. ماذا يقصد بجدول الإيقاع (العدات)؟</strong>
+                    <p style="margin-top: 5px;">
+                        هو السرعة والإيقاع الذي تصفق به أو تعد به للطلاب:<br>
+                        - <strong>تمرين بعدتين (بـ 2):</strong> حركة تأخذ خطوتين (ترفع يدك وتقول 1، تنزلها وتقول 2).<br>
+                        - <strong>تمرين بـ 4 عدات:</strong> تمرين معقد يأخذ 4 خطوات.<br>
+                        - <strong>تمرين بـ 8 عدات:</strong> يسمى "ثمانية" يأخذ 8 حركات متتالية.<br>
+                        <em>الدكتور أشار إلى أن أي إيقاع من هؤلاء غالباً يتم إعادته (6 تكرارات) ليستفيد الجسم.</em>
+                    </p>
+
+                    <div style="background: var(--warning); color: #fff; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center;">
+                        🔥 نصيحة للامتحان: إذا طلب منك كتابة إيعاز، تذكر هذا القالب واملأ الفراغات:<br>
+                        [الوضع] + الحركة + العضو + الاتجاه + (بـ عدات وتكرار) + كل ابدأ.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
