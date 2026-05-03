@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملخص الشامل والتفصيلي - طرائق التدريس</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f7fa;
+            --dark: #2c3e50;
+            --primary: #2980b9;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --purple: #8e44ad;
+            --orange: #d35400;
+            --teal: #16a085;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* رأس الصفحة */
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: var(--white);
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .header h1 { margin: 0; font-size: 32px; font-weight: 800; }
+        .header p { margin: 10px 0 0; font-size: 18px; opacity: 0.9; }
+
+        /* شبكة البطاقات */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        /* تصميم البطاقة */
+        .card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* الخط العلوي الملون */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 6px;
+        }
+
+        .card.blue::before { background-color: var(--primary); }
+        .card.green::before { background-color: var(--success); }
+        .card.orange::before { background-color: var(--warning); }
+        .card.teal::before { background-color: var(--teal); }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            color: var(--dark);
+        }
+
+        /* الحاويات الداخلية للأرقام */
+        .item-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-right: 4px solid #ddd;
+        }
+
+        .item.blue { border-color: var(--primary); }
+        .item.green { border-color: var(--success); }
+        .item.orange { border-color: var(--warning); }
+        .item.teal { border-color: var(--teal); }
+
+        .item-text { font-weight: 700; font-size: 16px; }
+        
+        .badge {
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        /* صناديق الشرح والتفاصيل */
+        .details-box {
+            padding: 12px 15px;
+            border-radius: 0 0 8px 8px;
+            border-top: none;
+            margin-top: -5px;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #34495e;
+            line-height: 1.8;
+        }
+
+        .details-box.blue { background: #ebf5fb; border: 1px solid #d6eaf8; border-right: 4px solid var(--primary); }
+        .details-box.green { background: #eafaf1; border: 1px solid #d5f5e3; border-right: 4px solid var(--success); }
+        .details-box.orange { background: #fef5e7; border: 1px solid #fadbd8; border-right: 4px solid var(--warning); }
+        .details-box.teal { background: #e8f8f5; border: 1px solid #d1f2eb; border-right: 4px solid var(--teal); }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="header">
+        <h1>📊 الملخص الرقمي التفصيلي</h1>
+        <p>مادة طرائق التدريس - أرقام وتفاصيل شاملة للمراجعة قبل الامتحان</p>
+    </div>
+
+    <div class="grid">
+        
+        <!-- بطاقة الأوضاع الرياضية -->
+        <div class="card teal">
+            <div class="card-title">🏃‍♂️ الأوضاع والحركات البدنية</div>
+            
+            <div class="item-wrapper">
+                <div class="item teal">
+                    <span class="item-text">الأوضاع الأساسية</span>
+                    <span class="badge" style="background: var(--teal);">5 أوضاع</span>
+                </div>
+                <div class="details-box teal">
+                    وقوف &nbsp;|&nbsp; بروك &nbsp;|&nbsp; استلقاء &nbsp;|&nbsp; جلوس &nbsp;|&nbsp; تعلق
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item teal">
+                    <span class="item-text">الأوضاع المشتقة</span>
+                    <span class="badge" style="background: var(--teal);">7 أوضاع</span>
+                </div>
+                <div class="details-box teal">
+                    حني &nbsp;|&nbsp; ثني &nbsp;|&nbsp; فتل أو برم &nbsp;|&nbsp; رفع وخفض &nbsp;|&nbsp; ضغط وخفض &nbsp;|&nbsp; مد وثني &nbsp;|&nbsp; ثني ومد
+                </div>
+            </div>
+        </div>
+
+        <!-- بطاقة خطة الدرس -->
+        <div class="card blue">
+            <div class="card-title">📝 خطة الدرس وتقسيماتها</div>
+            
+            <div class="item-wrapper">
+                <div class="item blue">
+                    <span class="item-text">أقسام خطة الدرس الكلية</span>
+                    <span class="badge" style="background: var(--primary);">3 أقسام</span>
+                </div>
+                <div class="details-box blue">
+                    القسم الإعدادي &nbsp;|&nbsp; القسم الرئيسي &nbsp;|&nbsp; القسم الختامي
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item blue">
+                    <span class="item-text">أجزاء القسم الإعدادي (التمهيدي)</span>
+                    <span class="badge" style="background: var(--primary);">4 أجزاء</span>
+                </div>
+                <div class="details-box blue">
+                    أعمال إدارية &nbsp;|&nbsp; إحماء عام &nbsp;|&nbsp; إحماء خاص &nbsp;|&nbsp; تمرينات بدنية
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item blue">
+                    <span class="item-text">أجزاء القسم الرئيسي</span>
+                    <span class="badge" style="background: var(--primary);">جزأين (2)</span>
+                </div>
+                <div class="details-box blue">
+                    شرح المهارة &nbsp;|&nbsp; تطبيق المهارة
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item blue">
+                    <span class="item-text">أجزاء القسم الختامي</span>
+                    <span class="badge" style="background: var(--primary);">جزأين (2)</span>
+                </div>
+                <div class="details-box blue">
+                    لعبة صغيرة &nbsp;|&nbsp; إرجاع الأدوات والانصراف
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item blue">
+                    <span class="item-text">مراحل القرار (الأسلوب الأمري)</span>
+                    <span class="badge" style="background: var(--primary);">3 مراحل</span>
+                </div>
+                <div class="details-box blue">
+                    ما قبل الدرس &nbsp;|&nbsp; أثناء الدرس &nbsp;|&nbsp; ما بعد الدرس
+                </div>
+            </div>
+        </div>
+
+        <!-- بطاقة المعلم والتدريس -->
+        <div class="card green">
+            <div class="card-title">👨‍🏫 المعلم وعملية التدريس</div>
+            
+            <div class="item-wrapper">
+                <div class="item green">
+                    <span class="item-text">مكونات عملية التدريس</span>
+                    <span class="badge" style="background: var(--success);">6 مكونات</span>
+                </div>
+                <div class="details-box green">
+                    المعلم &nbsp;|&nbsp; المتعلم &nbsp;|&nbsp; المناهج &nbsp;|&nbsp; بيئة التعلم &nbsp;|&nbsp; طريقة التدريس &nbsp;|&nbsp; التقويم
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item green">
+                    <span class="item-text">مبادئ رئيسية أثناء التدريس</span>
+                    <span class="badge" style="background: var(--success);">5 مبادئ</span>
+                </div>
+                <div class="details-box green">
+                    تحديد الأهداف &nbsp;|&nbsp; إعداد الدرس &nbsp;|&nbsp; التدرج &nbsp;|&nbsp; مراعاة الفروق &nbsp;|&nbsp; إثارة الميول
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item green">
+                    <span class="item-text">صفات المعلم الجيد</span>
+                    <span class="badge" style="background: var(--success);">11 صفة</span>
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item green">
+                    <span class="item-text">مسؤوليات مدرس الرياضة</span>
+                    <span class="badge" style="background: var(--success);">8 مسؤوليات</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- بطاقة إدارة الصف والملل -->
+        <div class="card orange">
+            <div class="card-title">⚠️ إدارة الصف والملل</div>
+            
+            <div class="item-wrapper">
+                <div class="item orange">
+                    <span class="item-text">إرشادات ضبط الصف والنظام</span>
+                    <span class="badge" style="background: var(--warning);">12 إرشاداً</span>
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item orange">
+                    <span class="item-text">أسباب الملل في الدرس</span>
+                    <span class="badge" style="background: var(--warning);">8 أسباب</span>
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item orange">
+                    <span class="item-text">زمن الدرس المسبب للملل</span>
+                    <span class="badge" style="background: var(--warning);">3 أوقات</span>
+                </div>
+                <div class="details-box orange">
+                    ساعة &nbsp;|&nbsp; ساعة ونصف &nbsp;|&nbsp; ساعتين
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
